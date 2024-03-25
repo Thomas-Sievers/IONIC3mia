@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora de desconto
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-input [(ngModel)]="preco" label="Coloque o valor da conta" label-placement="floating" fill="solid" 
+  placeholder="Enter text"></ion-input>
+
+  <ion-radio-group [(ngModel)]="radioSelecionada">
+    <ion-item>
+      <ion-radio value="pix">Pix</ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-radio value="debito">débito</ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-radio value="credito">crédito</ion-radio>
+    </ion-item>
+  </ion-radio-group>
+
+  <ion-button (click)="calcularDesconto()" expand="block">Calcular Desconto</ion-button>
+</ion-content>

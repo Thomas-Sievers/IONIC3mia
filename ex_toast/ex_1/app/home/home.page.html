@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Peso idela
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input [(ngModel)]="altura" label="Altura" labelPlacement="floating" placeholder="Sua altura em metros"></ion-input>
+  </ion-item>
+  <ion-radio-group [(ngModel)]='radioSelecionada'>
+    <ion-item>
+      <ion-radio value="m">Masculino</ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-radio value="f">Feminino</ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  <ion-button expand="block" (click)="calcularPesoIdeal()">Calcular peso ideal</ion-button>
+</ion-content>
