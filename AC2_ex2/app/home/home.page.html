@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Gasto com combustível
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <p>Coloque qual combustível você está usando</p>
+  <ion-radio-group [(ngModel)]="radioSelecionada">
+    <ion-item>
+      <ion-radio value="etanol">Etanol</ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-radio value="gasolina">Gasolina</ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-radio value="disel">Disel</ion-radio>
+    </ion-item>
+  </ion-radio-group>
+
+  <ion-input label="Quilometragem" [(ngModel)]="quilometragem" label-placement="floating" fill="solid" 
+  placeholder="Enter text"></ion-input>
+  
+  <ion-input label="Preço do combustível" [(ngModel)]="preco" label-placement="floating" fill="solid" 
+  placeholder="Enter text"></ion-input>
+
+  <ion-button color="medium" expand="block" (click)="calcularGasto()">Calcular</ion-button>
+</ion-content>
