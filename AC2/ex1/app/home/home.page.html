@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Aplicativo de transporte
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-radio-group [(ngModel)]="radioSelecionada">
+    <ion-item>
+      <ion-radio value="normal">Carro normal</ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-radio value="superior">Carro superior</ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-radio value="vip">Carro VIP</ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  
+  <ion-item>
+    <ion-input [(ngModel)]="quilometragem" label="Quiloemtragem" labelPlacement="floating"></ion-input>
+  </ion-item>
+  
+  <ion-button expand="block" (click)="calcularPreco()">Clique para calcular o preço de sua viagem</ion-button>
+</ion-content>
