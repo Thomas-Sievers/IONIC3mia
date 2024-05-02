@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <h1>Coloque o valor final da sua conta</h1>
+  <ion-input [(ngModel)]="valorConta" label="valor" label-placement="floating" fill="solid"></ion-input>
+
+  <div id="container">
+    <h1>Insira a quantidade de gorjeta que você deseja pagar.</h1>
+
+    <ion-range (ionChange)="onIonChange($event)" [ticks]="true" [snaps]="true" [min]="0" [max]="30"></ion-range>
+    {{valorRange + "%"}}<br/>
+
+    <ion-button (click)="calcularGorjeta()" shape="round">Calcular gorjeta</ion-button>
+  </div>
+</ion-content>
