@@ -33,16 +33,16 @@ export class HomePage {
 
     this.imc = this.peso/(this.altura*this.altura);
 
-    if(this.imc <= 16,9){
+    if(this.imc <= 16.9){
       this.classificacao = 'muito abaixo do peso';
     }
-    else if(this.imc >= 17 && this.imc <=18,4){
+    else if(this.imc >= 17 && this.imc <=18.4){
       this.classificacao = 'abaixo do peso'
     }
-    else if(this.imc >= 18,5 && this.imc <=24,9){
+    else if(this.imc >= 18.5 && this.imc <=24.9){
       this.classificacao = 'normal'
     }
-    else if(this.imc >=25 && this.imc <=29,9){
+    else if(this.imc >=25 && this.imc <=29.9){
       this.classificacao = 'acima do peso'
     }
     this.exibirAlerta()
