@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora de IMC
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <h1>Quais medidas você vai usar?</h1>
+    <ion-radio-group [(ngModel)]="radioSelecionadaPeso">
+      <ion-item>
+        <ion-radio value="kg">Quilos</ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-radio value="libras">Libras</ion-radio>
+      </ion-item>
+    </ion-radio-group><br>
+
+    <ion-radio-group [(ngModel)]="radioSelecionadaAltura">
+      <ion-item>
+        <ion-radio value="centrimetro">Centimetros</ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-radio value="metros">Metros</ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+    <h1>Coloque a seu peso</h1>
+    <ion-range (ionChange)="onIonChangePeso($event)" aria-label="Range with pin" [pin]="true" [pinFormatter]="pinFormatter"></ion-range><br>
+
+    <h1>Coloque sua altura</h1>
+    <ion-range (ionChange)="onIonChangeAltura($event)" [ticks]="true" [snaps]="true" [min]="100" [max]="230" [pin]="true" [pinFormatter]="pinFormatter"></ion-range>
+
+    <ion-button (click)="calcularIMC()" shape="round">Calcular IMC</ion-button>
+  </div>
+</ion-content>
