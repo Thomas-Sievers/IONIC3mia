@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora de Emprestimo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>Qual o valor do empréstimo?</ion-item>
+  <ion-range [(ngModel)]="emprestimo" aria-label="Range with pin" [pin]="true" [pinFormatter]="pinFormatterNormal" min="0" max="1000"></ion-range>
+
+  <ion-item>Qual é a taxa de juros anual?</ion-item>
+  <ion-range [(ngModel)]="juros" aria-label="Range with pin" [pin]="true" [pinFormatter]="pinFormatterPorcentage" min="0" max="100"></ion-range>
+
+  <ion-item>Quantos meses você precisa pagar?</ion-item>
+  <ion-range [(ngModel)]="meses" aria-label="Range with pin" [pin]="true" [pinFormatter]="pinFormatterNormal" min="0" max="100"></ion-range>
+
+  <ion-item>A prestação mensal é de: {{prestacaoMensal}}</ion-item>
+
+  <ion-item>O total que você terá que pagar é de: {{total}}</ion-item>
+
+  <ion-button expand="block" (click)="calcularPrestacaoMensal()" (click)="calcularTotal()">Calcular Emprestimo</ion-button>
+</ion-content>
