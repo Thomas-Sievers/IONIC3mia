@@ -15,11 +15,8 @@ export class HomePage {
 
   constructor() {}
 
-  calcularPrestacaoMensal(){
+  fazerCalculos(){
     this.prestacaoMensal = this.emprestimo * (this.juros/100)
-  }
-
-  calcularTotal(){
     this.total = (this.prestacaoMensal * this.meses) + this.emprestimo
   }
 
