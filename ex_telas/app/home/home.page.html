@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Aplicativo de diária</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <p>Qual é o valor da diária?</p>
+  </ion-item>
+  <ion-item>
+    <ion-range [(ngModel)]="precoDiaria" aria-label="Range with pin" [pin]="true" [pinFormatter]="pinFormatter"></ion-range>
+  </ion-item>
+
+  <ion-item>
+    <p>Quanto tempo você vai passar hospedado?</p>
+  </ion-item>
+  <ion-item>
+    <ion-range [(ngModel)]="tempoDiaria" [min]="0" [max]="365" aria-label="Range with pin" [pin]="true" 
+    [pinFormatter]="pinFormatter"></ion-range>
+  </ion-item>
+
+  <ion-button (click)="trocarTela()" expand="block">Confirmar Informações</ion-button>
+</ion-content>

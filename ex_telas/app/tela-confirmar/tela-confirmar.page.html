@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tela-confirmar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">tela-confirmar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <h1>Aqui estão suas informações</h1>
+  </ion-item>
+
+
+  <ion-label>Preço da diária: {{precoDiaria | currency: 'BRL'}}</ion-label><br>
+  <ion-label>O tempo que você irá se hospedar: {{tempoDiaria}}</ion-label><br>
+  <ion-label>O valor total que vai pagar: {{valorTotal | currency: 'BRL'}}</ion-label><br>
+
+  <ion-item>
+    <ion-label><ion-button (click)="voltarTela()" color="danger">Voltar</ion-button></ion-label>
+    
+    <ion-button (click)="telaFinal()" color="success">Confirmar</ion-button>
+  </ion-item>
+
+  
+</ion-content>
