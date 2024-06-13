@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-toolbar>
+  <ion-title>Qual é a temperatura média dos últimos 4 meses?</ion-title>
+</ion-toolbar>
+
+<ion-range [(ngModel)]="tempMedia" min="-10" max="35" [pin]="true" [pinFormatter]="pinFormatter"></ion-range>
+
+<ion-button (click)="checarCulturas()" expand="block">Conferir Frutas</ion-button>
+</ion-content>
