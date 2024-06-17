@@ -8,6 +8,10 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
+  tempDiaUm = 0;
+  tempDiaDois = 0;
+  tempDiaTres = 0;
+  tempDiaQuatro = 0;
   tempMedia = 0;
   frutas: string[] = [];
   mensagem = "";
@@ -15,6 +19,8 @@ export class HomePage {
   constructor(public router: Router) {}
 
   checarCulturas(){
+    this.tempMedia = (this.tempDiaUm + this.tempDiaDois + this.tempDiaTres + this.tempDiaQuatro)/4 
+
     if(this.tempMedia >= 15 && this.tempMedia <= 25){
       this.frutas = [];
       this.frutas.push("Banana", "Abacate", "Limão", "Pêssego", "Morango", "Kiwi", "Abacaxi", "Maracujá", "Melancia");

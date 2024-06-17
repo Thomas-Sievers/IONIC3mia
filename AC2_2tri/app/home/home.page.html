@@ -14,10 +14,28 @@
   </ion-header>
 
 <ion-toolbar>
-  <ion-title>Qual é a temperatura média dos últimos 4 meses?</ion-title>
+  <ion-title>Qual foi a temperatura do primeiro dia do mês?</ion-title>
 </ion-toolbar>
 
-<ion-range [(ngModel)]="tempMedia" min="-10" max="35" [pin]="true" [pinFormatter]="pinFormatter"></ion-range>
+<ion-range [(ngModel)]="tempDiaUm" min="-10" max="35" [pin]="true" [pinFormatter]="pinFormatter"></ion-range>
+
+<ion-toolbar>
+  <ion-title>Qual foi a temperatura do segundo dia do mês?</ion-title>
+</ion-toolbar>
+
+<ion-range [(ngModel)]="tempDiaDois" min="-10" max="35" [pin]="true" [pinFormatter]="pinFormatter"></ion-range>
+
+<ion-toolbar>
+  <ion-title>Qual foi a temperatura do terceiro dia do mês?</ion-title>
+</ion-toolbar>
+
+<ion-range [(ngModel)]="tempDiaTres" min="-10" max="35" [pin]="true" [pinFormatter]="pinFormatter"></ion-range>
+
+<ion-toolbar>
+  <ion-title>Qual foi a temperatura do quarto dia do mês?</ion-title>
+</ion-toolbar>
+
+<ion-range [(ngModel)]="tempDiaQuatro" min="-10" max="35" [pin]="true" [pinFormatter]="pinFormatter"></ion-range>
 
 <ion-button (click)="checarCulturas()" expand="block">Conferir Frutas</ion-button>
 </ion-content>
