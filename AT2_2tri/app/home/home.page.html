@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora Juros Compostos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input [(ngModel)]="prestacao" label="Valor da prestação"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-range [(ngModel)]="juros" labelPlacement="start" label="taxa de juros" [pin]="true" 
+    [pinFormatter] ="pinFormatterPercentage"></ion-range>
+
+    <ion-range [(ngModel)]="meses" labelPlacement="end" label="Meses em atrasos" [pin]="true" 
+    [pinFormatter]="pinFormatterNormal"></ion-range>
+  </ion-item>
+
+  <div id="container">
+    <ion-button shape="round" (click)="calcular()">Calcular</ion-button>
+  </div>
+</ion-content>
