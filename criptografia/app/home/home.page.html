@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-label>Nome: </ion-label>
+    <ion-input [(ngModel)]="name" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Email: </ion-label>
+    <ion-input [(ngModel)]="email"></ion-input>
+
+    <ion-label>Nota: </ion-label>
+    <ion-input [(ngModel)]="note"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Chave de acesso: </ion-label>
+    <ion-input [(ngModel)]="secretKey" type="text"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="encrypt()">Criptografar</ion-button>
+</ion-content>
