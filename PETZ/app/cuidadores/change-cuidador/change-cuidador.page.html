@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>change-cuidador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1 class="ion-text-center">ALTERA</h1>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Nome</ion-label>
+     <ion-input [(ngModel)]="cuidador.nome"></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">telefone</ion-label>
+     <ion-input [(ngModel)]="cuidador.telefone"></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">expericencia</ion-label>
+     <ion-input [(ngModel)]="cuidador.experiencia"></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label type="number" position="floating">especialidade</ion-label>
+     <ion-input [(ngModel)]="cuidador.especialidade"></ion-input>
+  </ion-item>
+  <br>
+
+  <ion-button expand="block" (click)="save()">Salvar</ion-button>
+  <ion-button expand="block" fill="outline" routerLink="/cuidador">Voltar</ion-button>
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>add-animal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <h1 class="ion-text-center">CADASTRO</h1>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Nome</ion-label>
+      <!-- Intrega o input com o atributo nome da classe Animal-->
+       <ion-input [(ngModel)]="animal.nome"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Especie</ion-label>
+      <!-- Intrega o input com o atributo especie da classe Animal-->
+       <ion-input [(ngModel)]="animal.especie"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">raca</ion-label>
+      <!-- Intrega o input com o atributo raca da classe Animal-->
+       <ion-input [(ngModel)]="animal.raca"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label type="number" position="floating">idade</ion-label>
+      <!-- Intrega o input com o atributo idade da classe Animal-->
+       <ion-input [(ngModel)]="animal.idade"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label labelPlacement="stacked" position="floating">adicionais</ion-label>
+      <!-- Intrega o input com o atributo especie da classe Animal-->
+       <ion-input [(ngModel)]="animal.adicionais"></ion-input>
+    </ion-item>
+    <br>
+
+    <ion-button expand="block" (click)="save()">Salvar</ion-button>
+    <ion-button expand="block" fill="outline" routerLink="/">Voltar</ion-button>
+</ion-content>

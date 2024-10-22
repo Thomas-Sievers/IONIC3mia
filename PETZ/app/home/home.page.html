@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item *ngIf="animalList.length === 0">
+    <!-- Exibe uma mensagem quando não temos nenhum registro -->
+     <ion-label> Nenhum registro encontrado </ion-label>
+  </ion-item>
+
+  <!-- Percorre a lista para exibir na tela-->
+  <ion-item-sliding *ngFor="let animal of animalList">
+
+    <ion-item lines="full">
+      <ion-label>{{animal.nome}}</ion-label>
+      <ion-label>{{animal.especie}}</ion-label>
+      <ion-label>{{animal.raca}}</ion-label>
+      <ion-label>{{animal.idade}}</ion-label>
+      <ion-label>{{animal.adicionais}}</ion-label>
+    </ion-item>
+
+    <!--Exibe os botões de alterar e excluir-->
+    <ion-item-options side="end">
+
+      <!--Exibe o botão de alterar e leva para a rota do formuário de alteração-->
+      <ion-item-option color="warning" routerLink="/animal/change-animal/{{animal.id}}">
+        <ion-icon slot="icon-only" name="heart"></ion-icon>
+      </ion-item-option>
+
+      <!--Exibe o botão de exclusão e chama o método de exclusão-->
+      <ion-item-option color="danger" (click)="deleteAnimal(animal.id)">
+        <ion-icon slot="icon-only" name="star"></ion-icon>
+      </ion-item-option>
+
+    </ion-item-options>
+  </ion-item-sliding>
+
+  <!-- Exibe o botão ir ao formulário de cadastro -->
+   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/animal/add-animal">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+   </ion-fab>
+
+   <ion-button (click)="switchCuidadores()">Trocar para página de cuidadores</ion-button>
+</ion-content>
